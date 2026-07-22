@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Refrigeration LLC | AC Service Hilliard Ohio</title>
+  <meta name="description" content="Professional AC & refrigeration service at your door step. Adam Refrigeration LLC - Hilliard, Ohio. Call (843) 467-3988">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--blue:#2563eb;--blue-dark:#1e40af;--orange:#f59e0b;--dark:#0f172a;--text:#334155;--gray:#64748b;--bg:#f8fafc;--white:#fff;--border:#e2e8f0;--green:#16a34a;--radius:8px}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+    /* HEADER */
+    .header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.08);border-bottom:1px solid var(--border)}
+    .nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+    .logo{font-size:1.3rem;font-weight:800;color:var(--blue);letter-spacing:-.5px}
+    .logo span{color:var(--orange)}
+    .nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{font-weight:500;font-size:.95rem;color:var(--text);transition:color .3s}
+    .nav-links a:hover{color:var(--blue)}
+    .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:10px 24px;border-radius:var(--radius);font-weight:600!important}
+    .nav-cta:hover{background:var(--blue-dark)!important}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:var(--white);padding:100px 0 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:rgba(255,255,255,.05);border-radius:50%}
+    .hero h1{font-size:3.2rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px;line-height:1.1}
+    .hero p{font-size:1.25rem;opacity:.9;margin-bottom:12px}
+    .hero-sub{font-size:1rem!important;opacity:.7!important;margin-bottom:32px!important}
+    .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:1rem;border:none;cursor:pointer;transition:all .3s}
+    .btn-primary{background:var(--orange);color:var(--white)}
+    .btn-primary:hover{background:#d97706;transform:translateY(-2px);box-shadow:0 6px 20px rgba(245,158,11,.4)}
+    .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4)}
+    .btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.8)}
+
+    /* TRUST BAR */
+    .trust-bar{background:var(--white);padding:32px 0;border-bottom:1px solid var(--border)}
+    .trust-items{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:12px;font-weight:600;font-size:.95rem;color:var(--dark)}
+    .trust-icon{width:44px;height:44px;background:#f0fdf4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--green)}
+
+    /* SECTIONS */
+    .section{padding:80px 0}
+    .section-alt{background:var(--bg)}
+    .section-title{text-align:center;margin-bottom:48px}
+    .section-title h2{font-size:2.2rem;font-weight:800;color:var(--dark);margin-bottom:12px;letter-spacing:-.5px}
+    .section-title p{font-size:1.1rem;color:var(--gray);max-width:600px;margin:0 auto}
+
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .service-card{background:var(--white);padding:32px 28px;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid var(--border);transition:all .3s}
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.12);border-color:var(--blue)}
+    .service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--white);margin-bottom:20px}
+    .service-card h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:10px}
+    .service-card p{font-size:.95rem;color:var(--gray);line-height:1.7}
+
+    /* WHY US */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+    .why-card{display:flex;gap:16px;align-items:flex-start}
+    .why-num{flex-shrink:0;width:48px;height:48px;background:var(--blue);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem}
+    .why-card h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+    .why-card p{font-size:.9rem;color:var(--gray)}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .contact-details,.contact-form-box{background:var(--white);padding:36px;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid var(--border)}
+    .contact-details h3,.contact-form-box h3{font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:24px}
+    .contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+    .contact-item-icon{flex-shrink:0;width:40px;height:40px;background:#f0fdf4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--green)}
+    .contact-item strong{display:block;font-size:.85rem;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+    .contact-item span{font-size:1rem;color:var(--dark);font-weight:600}
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:6px}
+    .form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);font-size:.95rem;font-family:inherit;color:var(--dark);background:var(--bg);transition:border-color .3s,box-shadow .3s}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1);background:var(--white)}
+    .form-group textarea{resize:vertical;min-height:100px}
+    .form-submit{width:100%;padding:14px;background:var(--blue);color:var(--white);border:none;border-radius:var(--radius);font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s}
+    .form-submit:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.1)}
+
+    /* MAP */
+    .map-embed{width:100%;height:350px;border:none;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);display:block}
+
+    /* FOOTER */
+    .footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .footer-brand h3{color:var(--white);font-size:1.25rem;margin-bottom:12px}
+    .footer-brand p{font-size:.9rem;line-height:1.7}
+    .footer-col h4{color:var(--white);font-size:1rem;font-weight:700;margin-bottom:16px}
+    .footer-col p,.footer-col a{display:block;font-size:.9rem;margin-bottom:8px;transition:color .3s}
+    .footer-col a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.85rem}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .hero h1{font-size:2.2rem}
+      .hero{padding:60px 0 50px}
+      .section-title h2{font-size:1.7rem}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr;gap:24px}
+      .trust-items{gap:24px}
+      .hero-buttons{flex-direction:column;align-items:center}
+    }
+    @media(max-width:480px){
+      .hero h1{font-size:1.75rem}
+      .services-grid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .btn{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">ADAM <span>REFRIGERATION</span> LLC</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+18434673988" class="nav-cta">Call Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Adam Refrigeration LLC</h1>
+      <p>Professional AC &amp; Refrigeration Service at Your Doorstep</p>
+      <p class="hero-sub">Serving Hilliard, Ohio &amp; Surrounding Areas</p>
+      <div class="hero-buttons">
+        <a href="tel:+18434673988" class="btn btn-primary">Call (843) 467-3988</a>
+        <a href="#contact" class="btn btn-outline">Request a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item"><div class="trust-icon">&#10003;</div>Licensed &amp; Insured</div>
+        <div class="trust-item"><div class="trust-icon">&#9889;</div>Same-Day Service</div>
+        <div class="trust-item"><div class="trust-icon">&#9733;</div>100% Satisfaction</div>
+        <div class="trust-item"><div class="trust-icon">&#128336;</div>24/7 Emergency</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Complete AC and refrigeration solutions for residential and commercial customers in Hilliard, Ohio.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#128295;</div>
+          <h3>AC Repair</h3>
+          <p>Expert repair for all makes and models of air conditioning systems. Fast diagnostics and reliable fixes to restore your comfort quickly.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128230;</div>
+          <h3>AC Installation</h3>
+          <p>Professional installation of central air, ductless mini-splits, and window units. We help you choose the right system for your home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128737;</div>
+          <h3>Maintenance</h3>
+          <p>Preventive maintenance plans to keep your system running efficiently, extend equipment life, and avoid unexpected breakdowns.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128680;</div>
+          <h3>Emergency Service</h3>
+          <p>24/7 emergency repair services. When your AC fails, we respond fast to get your home comfortable again.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#10052;</div>
+          <h3>Refrigeration Repair</h3>
+          <p>Commercial and residential refrigeration repair including walk-in coolers, freezers, and display cases.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127777;&#65039;</div>
+          <h3>Thermostat Services</h3>
+          <p>Smart thermostat installation, programming, and repair to optimize your comfort and energy savings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why-us" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Adam Refrigeration?</h2>
+        <p>Trusted by homeowners and businesses throughout the Hilliard area.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">1</div>
+          <div>
+            <h3>Experienced Technicians</h3>
+            <p>Our certified technicians have years of hands-on experience with all HVAC brands and systems.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">2</div>
+          <div>
+            <h3>Upfront Pricing</h3>
+            <p>No hidden fees or surprise charges. You get a clear estimate before any work begins.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">3</div>
+          <div>
+            <h3>Fast Response Time</h3>
+            <p>Same-day appointments available. We respect your time and show up when scheduled.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">4</div>
+          <div>
+            <h3>Quality Workmanship</h3>
+            <p>We stand behind our work with a satisfaction guarantee on all services performed.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">5</div>
+          <div>
+            <h3>Locally Owned</h3>
+            <p>Proudly serving the Hilliard, Ohio community with personalized and friendly service.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">6</div>
+          <div>
+            <h3>Transparent Communication</h3>
+            <p>We explain every issue and solution in plain language so you can make informed decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Ready to schedule service? Reach out today for a free estimate.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128222;</div>
+            <div>
+              <strong>Phone</strong>
+              <span>(843) 467-3988</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128205;</div>
+            <div>
+              <strong>Address</strong>
+              <span>5310 Center St, Hilliard, OH 43026</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128336;</div>
+            <div>
+              <strong>Hours</strong>
+              <span>Mon - Sat: 7AM - 8PM | 24/7 Emergency</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-box">
+          <h3>Request a Free Quote</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="(614) 555-0123" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option>AC Repair</option>
+                <option>AC Installation</option>
+                <option>Maintenance</option>
+                <option>Emergency Service</option>
+                <option>Refrigeration Repair</option>
+                <option>Thermostat Service</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Describe your issue or request..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Location</h2>
+      </div>
+      <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.0!2d-83.158307!3d40.033374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDAyJzAwLjEiTiA4M8KwMDknMjkuOSJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Adam Refrigeration LLC Location"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Adam Refrigeration LLC</h3>
+          <p>Professional AC and refrigeration services for residential and commercial customers in Hilliard, Ohio and surrounding areas. Licensed, insured, and committed to your comfort.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p>(843) 467-3988</p>
+          <p>5310 Center St</p>
+          <p>Hilliard, OH 43026</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adam Refrigeration LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
